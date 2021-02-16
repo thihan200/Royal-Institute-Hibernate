@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="336.0" prefWidth="600.0" style="-fx-background-color: #f6e58d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.royalInstitute.controller.DashboardFormController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: #dff9fb;">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="71.0" layoutX="15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="109.0" layoutY="15.0" prefHeight="53.0" prefWidth="416.0" text="The Royal Institute">
+               <font>
+                  <Font name="Algerian" size="38.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="548.0" layoutY="25.0" onMouseReleased="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/logout.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="96.0" fitWidth="108.0" layoutX="72.0" layoutY="147.0" onMouseReleased="#studentOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/students.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="250.0" prefHeight="26.0" prefWidth="85.0" text="Students">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="82.0" fitWidth="89.0" layoutX="261.0" layoutY="157.0" onMouseReleased="#courseOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/course.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="264.0" layoutY="250.0" prefHeight="26.0" prefWidth="82.0" text="Courses">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="432.0" layoutY="147.0" onMousePressed="#registerOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/register.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="421.0" layoutY="250.0" prefHeight="26.0" prefWidth="116.0" text="Registration">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
