@@ -20,8 +20,21 @@ public class LoginFormController {
     public JFXTextField txtUsername;
     public JFXPasswordField txtpwd;
     public AnchorPane root;
-    public TextField txtPassword;
+//    public TextField txtPassword;
     public ImageView imgEye;
+    public ImageView imgEyeCross;
+    public JFXTextField txtPassword;
+
+    public void initialize(){
+        setDefault();
+    }
+
+    private void setDefault() {
+        txtpwd.setVisible(true);
+        txtPassword.setVisible(false);
+        imgEye.setVisible(true);
+        imgEyeCross.setVisible(false);
+    }
 
 
     public void loginOnAction(ActionEvent actionEvent) throws IOException {
@@ -51,13 +64,25 @@ public class LoginFormController {
 
 
 
-    public void pwdshowOnAction(MouseEvent mouseEvent) {
-
-    }
-
     public void clearOnAction(ActionEvent actionEvent) {
         txtUsername.setText("");
         txtpwd.setText("");
         txtPassword.setText("");
+    }
+
+    public void pwdshowOnAction(MouseEvent mouseEvent) {
+        txtpwd.setVisible(false);
+        txtPassword.setVisible(true);
+        imgEyeCross.setVisible(true);
+        imgEye.setVisible(false);
+        txtPassword.setText(txtpwd.getText());
+    }
+
+    public void passwordshowOnAction(MouseEvent mouseEvent) {
+        txtpwd.setVisible(true);
+        txtPassword.setVisible(false);
+        imgEyeCross.setVisible(false);
+        imgEye.setVisible(true);
+        txtpwd.setText(txtPassword.getText());
     }
 }
